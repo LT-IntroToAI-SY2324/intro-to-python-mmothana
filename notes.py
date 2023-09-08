@@ -1,3 +1,5 @@
+
+
 # This File will be used as notes for the basics of python
 # There is a lot in this file, you should add, subtract, change things as needed to help fully understand the process.
 # Mr. Berg will be going over all parts, but will not be grading anything in this file
@@ -5,8 +7,10 @@
 # types
 
 # str
-y = "I love Computer Science!"
 
+
+y = "I love Computer Science!"
+print(y)
 # numbers
 mynum = 47
 anothernum = 47.7
@@ -95,7 +99,7 @@ print(dinner)
 
 # f String
 age = 25
-# print("Mary is " + age + " years old")
+# print("Mary is" + age + "years old")
 print(f"Mary is {age} years old")
 
 
