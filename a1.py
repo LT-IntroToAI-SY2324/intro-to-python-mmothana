@@ -17,7 +17,7 @@ from typing import List, TypeVar
 
 def absolute(n: int) -> int:
     """Gives the absolute value of the passed in number. Cannot use the built in
-    function `abs`.
+function `abs`.
 
     Args:
         n - the number to take the absolute value of
@@ -25,7 +25,13 @@ def absolute(n: int) -> int:
     Returns:
         the absolute value of the passed in number
     """
-    raise NotImplementedError("absolute")
+    if n<0:
+        return -1*n
+    else:
+        return n
+
+
+
 
 
 def factorial(n: int) -> int:
@@ -38,7 +44,13 @@ def factorial(n: int) -> int:
     Returns:
         factorial of the passed in number
     """
+    result = 1
+    for x in range(1,n):
+        result *=x 
+    return result
     raise NotImplementedError("factorial")
+
+
 
 
 T = TypeVar("T")
@@ -55,7 +67,16 @@ def every_other(lst: List[T]) -> List[T]:
     Returns:
         a list of every of other item in the original list starting with the first
     """
-    raise NotImplementedError("every_other")
+    # new_list = []
+    # for i in range(len(lst)):
+    #     if i % 2 == 0:
+    #         new_list.append(lst[i])
+    #     return new_list
+        return lst[::2]
+
+
+
+
 
 
 def sum_list(lst: List[int]) -> int:
@@ -68,7 +89,10 @@ def sum_list(lst: List[int]) -> int:
     Returns:
         the sum of the passed in list
     """
-    raise NotImplementedError("sum_list")
+    s = 0
+    for el in lst:
+        s = s + el
+    return el
 
 
 def mean(lst: List[int]) -> float:
@@ -80,7 +104,9 @@ def mean(lst: List[int]) -> float:
     Returns:
         the mean of the passed in list
     """
-    raise NotImplementedError("mean")
+    mean = sum(lst) / len(lst)
+    print("The mean is", mean)
+
 
 
 def median(lst: List[int]) -> float:
@@ -121,7 +147,7 @@ def duck_duck_goose(lst: List[str]) -> List[str]:
 
 
 # this line causes the nested code to be skipped if the file is imported instead of run
-if __name__ == "__main__":
+if __name__ == "__main__": 
     assert absolute(-1) == 1, "absolute of -1 failed"
     assert factorial(4) == 24, "factorial of 4 failed"
     assert every_other([1, 2, 3, 4, 5]) == [
