@@ -72,7 +72,7 @@ def every_other(lst: List[T]) -> List[T]:
     #     if i % 2 == 0:
     #         new_list.append(lst[i])
     #     return new_list
-        return lst[::2]
+    return lst[::2]
 
 
 
